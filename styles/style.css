@@ -5,3 +5,81 @@
     box-sizing: border-box;
     font-size: 18px;
 }
+
+/* Home page styling */
+#home-container {
+    height: 100vh;
+    min-height: 500px;
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}
+
+#background-video {
+    min-width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.5) 100%);
+}
+
+header h1 {
+    color: white;
+    font-size: 2em;
+}
+
+#home-nav {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    position: relative;
+}
+
+.home-nav-ampersand {
+    height: 10vh;
+    max-height: 50px;
+    min-height: 25px;
+
+    position: relative;
+}
+
+.home-nav-link {
+    display: block; 
+    height: 35vh;
+    max-height: 200px;
+    min-height: 100px;
+    text-decoration: none;
+
+    position: relative;
+    top: 0;
+}
+
+.home-nav-link img {
+    height: 100%;
+    transition: all 0.2s ease-out;
+}
+
+/* Position the coloured image under the first */
+.home-nav-link .home-nav-hover-image {
+    position: absolute; 
+    left: -0;
+    z-index: -1;
+}
+
+/* On hover, reveal the coloured image */
+.home-nav-original-image:hover {
+    opacity: 0;
+}
