@@ -151,3 +151,36 @@ a {
 .other:hover {
     color: var(--other);
 }
+
+#content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 40px;
+    height: 100svh;
+    /* Need this because the horizontal scroll bar takes up space, causing y overflow
+     */
+    overflow-y: hidden;
+}
+
+#content article {
+    display: block;
+    height: 80%;
+}
+
+#content article img {
+    display: block;
+    height: 91%;
+}
+
+#content article span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9%;
+    width: 100%;
+}
+
+#content article span h2 {
+    font-size: 1.1em;
+}
