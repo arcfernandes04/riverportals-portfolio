@@ -170,17 +170,39 @@ a {
 
 #content article img {
     display: block;
+}
+
+.series-cover img{
     height: 91%;
 }
 
-#content article span {
+.series-cover span {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 9%;
-    width: 100%;
+    width: 100%; 
 }
 
-#content article span h2 {
+.series-cover span h2 {
     font-size: 1.1em;
+}
+
+.series-img img, .series-img video{
+    height: 100%;
+}
+
+.series-desc {
+    /* background-color: #d21212; */
+    padding: 10px 10px 10px 0 ;
+}
+
+.series-desc h2 {
+    /* background-color: gold; */
+    width: 400px;
+    font-size: 1.2em;
+}
+
+.series-desc p {
+    padding-top: 15px;
 }
