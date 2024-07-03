@@ -15,9 +15,11 @@
 
 /* Home page styling */
 #home-container {
-    height: 100svh;
+    min-height: 100svh;
+    max-width: 100svw;
     display: grid;
     grid-template-rows: 80px 1fr;
+    grid-template-columns: 100%;
 }
 
 #background-video {
@@ -205,4 +207,19 @@ a {
 
 .series-desc p {
     padding-top: 15px;
+}
+
+/* Mobile Styling */
+
+@media screen and (max-width: 910px) {
+    #home-container {
+        background-image: url("/media/home/background-cover.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #background-video {
+        display: none;
+    }
 }
