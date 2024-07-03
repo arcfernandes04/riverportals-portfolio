@@ -212,14 +212,24 @@ a {
 /* Mobile Styling */
 
 @media screen and (max-width: 910px) {
-    #home-container {
-        background-image: url("/media/home/background-cover.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    #home-nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5svh;
     }
 
-    #background-video {
+    .home-nav-ampersand {
         display: none;
+    }
+    
+    .home-nav-link {
+        height: 15svh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-nav-link {
+        height: 80px;
+        min-height: auto;
     }
 }
