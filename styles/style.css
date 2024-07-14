@@ -35,8 +35,8 @@
 header {
     padding: 1em;
     text-align: center;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.5) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 header h1 {
@@ -66,7 +66,7 @@ header h1 {
 }
 
 .home-nav-link {
-    display: block; 
+    display: block;
     height: 35svh;
     max-height: 200px;
     min-height: 100px;
@@ -83,7 +83,7 @@ header h1 {
 
 /* Position the coloured image under the first */
 .home-nav-link .home-nav-hover-image {
-    position: absolute; 
+    position: absolute;
     left: -0;
     z-index: -1;
 }
@@ -100,9 +100,7 @@ a {
     transition: all 0.2s ease-out;
 }
 
-#split-container {
-    display: grid;
-    grid-template-columns: 400px 1fr;
+#subpage-container {
     height: 100svh;
 }
 
@@ -110,15 +108,26 @@ a {
     background-color: #f5f5f5;
     height: 100%;
     padding: 20px;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     overflow: hidden;
+
+    transition: width 0.2s ease-out;
 }
 
-#subpage-nav h1{
+#menu-toggle {
+    display: none;
+}
+
+#subpage-nav h1 {
     height: 80px;
     width: 100%;
     font-size: 1.5em;
@@ -133,9 +142,10 @@ a {
     margin: 20px 0;
 }
 
-#subpage-nav .contact {
+footer {
     position: absolute;
     bottom: 20px;
+    margin-left: 20px;
 }
 
 .posters:hover {
@@ -155,6 +165,7 @@ a {
 }
 
 #content {
+    margin-left: 400px;
     display: flex;
     gap: 30px;
     align-items: center;
@@ -163,6 +174,8 @@ a {
     /* Need this because the horizontal scroll bar takes up space, causing y overflow
      */
     overflow-y: hidden;
+
+    transition: margin-left 0.2s ease-out;
 }
 
 #content article {
@@ -174,7 +187,7 @@ a {
     display: block;
 }
 
-.series-cover img{
+.series-cover img {
     height: 91%;
 }
 
@@ -183,20 +196,22 @@ a {
     align-items: center;
     justify-content: center;
     height: 9%;
-    width: 100%; 
+    width: 100%;
 }
 
 .series-cover span h2 {
     font-size: 1.1em;
+    text-align: center;
 }
 
-.series-img img, .series-img video{
+.series-img img,
+.series-img video {
     height: 100%;
 }
 
 .series-desc {
     /* background-color: #d21212; */
-    padding: 10px 10px 10px 0 ;
+    padding: 10px 10px 10px 0;
 }
 
 .series-desc h2 {
@@ -209,9 +224,11 @@ a {
     padding-top: 15px;
 }
 
-/* Mobile Styling */
+/* Responsive Styling */
 
 @media screen and (max-width: 910px) {
+
+    /* Index */
     #home-nav {
         flex-direction: column;
         justify-content: center;
@@ -221,9 +238,90 @@ a {
     .home-nav-ampersand {
         display: none;
     }
-    
+
     .home-nav-link {
         height: 15svh;
+    }
+
+    #subpage-nav {
+        width: 280px;
+    }
+
+    #content {
+        margin-left: 280px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #subpage-container {
+        height: 100%;
+        width: 100svw;
+    }
+
+    #subpage-nav {
+        height: 80px;
+        width: 100%;
+        position: static;
+        display: block;
+    }
+    
+    #subpage-nav h1 {
+        height: 100%;
+        line-height: 1.5em;
+    }
+
+    #menu-toggle {
+        display: block;
+        background-image: url('/media/nav/menu.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 2em;
+        width: 2em;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    #subpage-nav ul {
+        display: none;
+    }
+
+    #subpage-nav.open #menu-toggle{
+        background-image: url('/media/nav/close.png');
+    }
+
+    #subpage-nav.open {
+        height: 100%;
+    }
+
+    #subpage-nav.open ul {
+        display: block;
+    }
+
+    #content {
+        margin-left: 0;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    #content article {
+        display: block;
+        width: 95%;
+        height: auto;
+    }
+
+    #content article img, #content article video {
+        max-width: 100%;
+    }
+
+    footer {
+        position: static;
+        text-align: center;
+        margin-left: 0;
+        padding: 15px;
+        background-color: #f5f5f5;
     }
 }
 
