@@ -184,7 +184,7 @@ footer {
 }
 
 #content article img {
-    display: block;
+    display: inline-block;
 }
 
 .series-cover img {
@@ -255,7 +255,9 @@ footer {
 @media screen and (max-width: 660px) {
     #subpage-container {
         height: 100%;
-        width: 100svw;
+        max-width: 100svw;
+        min-height: 100svh;
+        position: relative;
     }
 
     #subpage-nav {
@@ -301,6 +303,7 @@ footer {
 
     #content {
         margin-left: 0;
+        padding-bottom: 90px;
         flex-direction: column;
         height: 100%;
         width: 100%;
@@ -317,7 +320,10 @@ footer {
     }
 
     footer {
-        position: static;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
         text-align: center;
         margin-left: 0;
         padding: 15px;
