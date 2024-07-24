@@ -210,18 +210,21 @@ footer {
 }
 
 .series-desc {
-    /* background-color: #d21212; */
     padding: 10px 10px 10px 0;
+    width: 250px;
+    display: flex;
+    align-content: center;
+
 }
 
 .series-desc h2 {
-    /* background-color: gold; */
-    width: 400px;
+    width: 250px;
     font-size: 1.2em;
 }
 
 .series-desc p {
     padding-top: 15px;
+    width: 250px;
 }
 
 /* Responsive Styling */
