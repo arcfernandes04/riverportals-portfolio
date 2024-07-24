@@ -3,6 +3,7 @@
     --illustrations: #4fa6ec;
     --photography: #f4d95a;
     --other: #9adf69;
+    --about: #ffffff;
 }
 
 * {
@@ -162,6 +163,10 @@ footer {
 
 .other:hover {
     color: var(--other);
+}
+
+.about:hover {
+    color: var(--about);
 }
 
 #content {
